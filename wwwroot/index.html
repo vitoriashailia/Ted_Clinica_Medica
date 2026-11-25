@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clínica Médica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header><div><p class="eyebrow">SISTEMA ACADÊMICO</p><h1>Clínica Médica</h1><p class="subtitulo">Cadastro e organização de consultas</p></div><span class="badge">● Sistema local</span></header>
+    <section class="painel">
+      <h2>Nova consulta</h2>
+      <form id="form-consulta">
+        <label>Nome do paciente<input name="paciente" required placeholder="Ex.: Ana Silva"></label>
+        <label>Especialidade<select name="especialidade" id="form-especialidade" required></select></label>
+        <label>Médico<select name="medico" id="form-medico" required></select></label>
+        <label>Convênio<select name="convenio" id="form-convenio" required></select></label>
+        <label>Exame (opcional)<select name="exame" id="form-exame"></select></label>
+        <label>Data e hora<input name="dataHora" type="datetime-local" required></label>
+        <label>Situação<select name="status"><option>Agendada</option><option>Concluída</option><option>Cancelada</option></select></label>
+        <button type="submit">Adicionar consulta</button>
+      </form>
+      <p id="mensagem" role="status"></p>
+    </section>
+    <section class="painel">
+      <div class="titulo-lista"><div><h2>Consultas</h2><p class="subtitulo">Pesquise, filtre e ordene os registros</p></div><span id="total" class="total">0 consultas</span></div>
+      <div class="filtros">
+        <label>Buscar<input id="busca" placeholder="O que você está procurando?"></label>
+        <label>Buscar em<select id="campo"><option value="todos">Todos os campos</option><option value="paciente">Paciente</option><option value="medico">Médico</option><option value="especialidade">Especialidade</option></select></label>
+        <label>Status<select id="status"><option>Todas</option><option>Agendada</option><option>Concluída</option><option>Cancelada</option></select></label>
+        <label>Especialidade<select id="filtro-especialidade"><option value="">Todas</option></select></label>
+        <label>Ordenar por<select id="ordem"><option value="data">Data (mais próxima)</option><option value="paciente">Nome do paciente</option></select></label>
+      </div>
+      <div class="tabela-wrap"><table><thead><tr><th>Paciente</th><th>Médico</th><th>Especialidade</th><th>Convênio</th><th>Exame</th><th>Data e hora</th><th>Status</th><th></th></tr></thead><tbody id="lista"></tbody></table></div>
+      <p id="vazio" class="vazio">Nenhuma consulta cadastrada ainda.</p>
+    </section>
+    <footer>Projeto de estudo • C# + ASP.NET Core + SQLite</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
