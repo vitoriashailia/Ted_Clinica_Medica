@@ -11,8 +11,7 @@ Projeto acadêmico simples para cadastrar e organizar consultas médicas. Feito 
 - Excluir uma consulta.
 
 ## Documentação
-Documentação do projeto acadêmico de acordo com as normas da ABNT
-https://docs.google.com/document/d/1IlEJViMNTpgLEVA-dWCMfXmbktb2FIa1Z2bl8S198Wo/edit?usp=sharing
+Documentação em pdf do projeto acadêmico de acordo com as normas da ABNT
 
 ## Como executar
 
